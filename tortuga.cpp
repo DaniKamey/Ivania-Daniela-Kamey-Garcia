@@ -1,5 +1,4 @@
 #include<iostream>
-#include<cstdlib>
 using namespace std;
 void menu();
 void mostrar(int mat[][20],int r,int c);
@@ -19,7 +18,6 @@ int main()
 
         do
 	{
-	    system("cls");
 		menu();
 		cin>>opc;
 		switch(opc)
@@ -28,28 +26,33 @@ int main()
 				pluma=0;
 				mat[r][c]=pluma;
 			break;
+			
 			case 2:
 				pluma=1;
 				mat[r][c]=pluma;
 			break;
+			
 			case 3:
 				derecha(horizonte);
 			break;
+			
 			case 4:
 				izquierda(horizonte);
 			break;
+			
 			case 5:
 				cout<<"cuantos espacios quieres avanzar: ";
 				cin>>espacio;
 				avanzar(mat,espacio,r,c,pluma,horizonte);
 			break;
+			
 			case 6:
 				mostrar(mat,r,c);
-				system("pause");
 			break;
 
 		}
 	}while(opc !=7);
+	
 	return 0;
 
 }
